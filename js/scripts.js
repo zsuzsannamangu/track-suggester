@@ -10,9 +10,9 @@ $(document).ready(function() {
       if (frontorback === "front") {
         $(".backend").hide();
         $(".tasks").hide();
-        $("#suggestion").show();
-        $("#design").show();
-        $("#endmessage").show();
+        $("#suggestion").fadeToggle();
+        $("#design").fadeToggle();
+        $("#endmessage").fadeToggle();
       } else if (frontorback === "back") {
         $(".nextquestions").show();
         $(".btntwo").show();
