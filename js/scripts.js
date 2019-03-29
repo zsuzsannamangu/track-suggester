@@ -16,7 +16,7 @@ $(document).ready(function() {
   event.preventDefault();
   });
 
-  $("form").submit(function(event) {
+  $("button").submit(function(event) {
     var largeorsmall = $("#largeorsmall").val();
     var tasks1 = $("#tasks1").val();
     var tasks2 = $("#tasks2").val();
@@ -33,10 +33,6 @@ $(document).ready(function() {
       } else if (largeorsmall === "small" && tasks3 === "ruby") {
         $("#suggestion").show();
         $("#ruby").show();
-
-
-
-
       } else {
         console.log("error");
       }
