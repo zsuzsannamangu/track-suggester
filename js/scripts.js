@@ -2,7 +2,9 @@ $(document).ready(function() {
   $("#button1").click(function(event) {
     var frontorback = $("#frontorback").val();
     var firstnameInput = $("input#firstname").val();
+    var emailInput = $("input#email").val();
 
+    $(".email").text(emailInput);
     $(".firstname").text(firstnameInput);
 
       if (frontorback === "front") {
@@ -27,10 +29,12 @@ $(document).ready(function() {
     var tasksone = $("#tasksone").val();
     var taskstwo = $("#taskstwo").val();
     var firstnameInput = $("input#firstname").val();
+    var emailInput = $("input#email").val();
 
+    $(".email").text(emailInput);
     $(".firstname").text(firstnameInput);
 
-      if (largeorsmall === "small" && tasksone === ("csharp" || "javaone") && taskstwo === ("javatwo" || "php")) {
+      if (largeorsmall === "small" && tasksone === "csharp" || tasksone === "javaone" && taskstwo === "javatwo" || taskstwo === "php") {
         $("#suggestion").show();
         $(".answer").show();
         $("#ruby").show();
@@ -39,7 +43,7 @@ $(document).ready(function() {
         $("#php").hide();
         $("#design").hide();
         $("#csharp").hide();
-      } else if (largeorsmall === "large" && tasksone === "csharp" && taskstwo === ("javatwo" || "php")) {
+      } else if (largeorsmall === "large" && tasksone === "csharp" && taskstwo === "javatwo" || taskstwo === "php") {
         $("#suggestion").show();
         $(".answer").show();
         $("#csharp").show();
