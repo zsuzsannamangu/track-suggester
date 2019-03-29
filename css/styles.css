@@ -1,8 +1,8 @@
-.answer {
+#suggestion, #design, #java, #csharp, #php, #ruby {
   display: none;
 }
 
-.nextquestions {
+.backend, .tasks {
   display: none;
 }
 
