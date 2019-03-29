@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Epicodus Tracks</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Epicodus Track Suggester</h2>
+      <h4>Currently, Epicodus offers the following tracks in Portland and Seattle:</h4>
+      <ul>
+        <li>Ruby/Rails</li>
+        <li>PHP/Drupal</li>
+        <li>Java/Android</li>
+        <li>CSS/Design</li>
+        <li>C#/.NET</li>
+      </ul>
+      <h4>Please fill out the form below to see suggestions for you!</h4>
+      <form id="form">
+          <div class="form-group">
+            <label for="firtsname">What is your first name?</label>
+            <input id="firstname" class="form-control" type="text">
+          </div>
+
+          <div class="form-group">
+            <label for="lastname">What is your last name?</label>
+            <input id="lastname" class="form-control" type="text">
+          </div>
+
+          <div class="form-group">
+            <label for="address">What is your address?</label>
+            <input id="address" class="form-control" type="text">
+          </div>
+
+          <h5>Do you want to focus more on front-end or back-end development? (See note below for explanation)</h5>
+          <select class="form-group" id="frontorback">
+            <option>Front-end development</option>
+            <option>Back-end development</option>
+          </select>
+
+          <p>Note: <strong>Front-end developers</strong> spend their time making things look and work well, obsessing over layouts, navigation, colors, and design. <strong>Back-end developers</strong> are responsible for server-side web application logic and integration of the work front-end developers do.</p>
+
+          <h5>Are you interested to work for bigger established businesses or smaller companies/start-ups?</h5>
+          <select class="form-group backend" id="largeorsmall">
+            <option>Bigger businesses</option>
+            <option>Smaller businesses</option>
+          </select>
+
+          <h5>What interests you the most out of these options?</h5>
+          <select class="form-group backend bigger" id="bigcompanies">
+            <option>Building internal software</option>
+            <option>Building Android user interfaces</option>
+            <option>Building out sites for brands, businesses and organizations</option>
+          </select>
+
+          <button type="submit" class="btn btn-info">Submit</button>
+      </form>
+
+      <div id="answer">
+        <h4>Our suggestion for you:</h4>
+        <p>blabla</p>
+      </div>
+
+    </div>
+  </body>
+</html>
