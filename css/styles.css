@@ -1,3 +1,11 @@
-#answer {
+.answer {
   display: none;
+}
+
+.nextquestions {
+  display: none;
+}
+
+#frontorback {
+  display: block;
 }
