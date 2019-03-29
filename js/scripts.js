@@ -1,6 +1,10 @@
 $(document).ready(function() {
   $("button").click(function(event) {
     var frontorback = $("#frontorback").val();
+    var firstnameInput = $("input#firstname").val();
+
+    $(".firstname").text(firstnameInput);
+
       if (frontorback === "front") {
         $(".backend").hide();
         $(".tasks").hide();
@@ -21,6 +25,7 @@ $(document).ready(function() {
     var tasks1 = $("#tasks1").val();
     var tasks2 = $("#tasks2").val();
     var tasks3 = $("#tasks3").val();
+    var firstnameInput = $("input#firstname").val();
       if (largeorsmall === "large" && tasks1 === "csharp") {
         $("#suggestion").show();
         $("#csharp").show();
@@ -36,6 +41,9 @@ $(document).ready(function() {
       } else {
         console.log("error");
       }
+
+      $(".firstname").text(firstnameInput);
+
   event.preventDefault();
   });
 });
