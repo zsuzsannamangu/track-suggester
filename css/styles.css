@@ -1,4 +1,4 @@
-#suggestion, #design, #java, #csharp, #php, #ruby, .btntwo {
+#suggestion, #design, #java, #csharp, #php, #ruby, .btntwo, #endmessage {
   display: none;
 }
 
@@ -51,4 +51,8 @@ input[type=text], select {
 .header ul {
   padding: 15px;
   font-size: 15px;
+}
+
+#endmessage {
+  color: #577399;
 }

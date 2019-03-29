@@ -10,10 +10,12 @@ $(document).ready(function() {
         $(".tasks").hide();
         $("#suggestion").show();
         $("#design").show();
+        $("#endmessage").show();
       } else if (frontorback === "back") {
         $(".nextquestions").show();
         $(".btntwo").show();
         $(".answer").hide();
+        $("#endmessage").hide();
       } else {
         console.log("error");
       }
@@ -25,6 +27,9 @@ $(document).ready(function() {
     var tasksone = $("#tasksone").val();
     var taskstwo = $("#taskstwo").val();
     var firstnameInput = $("input#firstname").val();
+
+    $(".firstname").text(firstnameInput);
+    
       if (largeorsmall === "small" && tasksone === "csharp" || "javaone" && taskstwo === "javatwo" || "phpone" || "phptwo") {
         $("#suggestion").show();
         $("#ruby").show();
@@ -43,8 +48,6 @@ $(document).ready(function() {
       } else {
         console.log("error");
       }
-
-      $(".firstname").text(firstnameInput);
 
   event.preventDefault();
   });
