@@ -30,31 +30,42 @@ $(document).ready(function() {
 
     $(".firstname").text(firstnameInput);
 
-      if (largeorsmall === "small" && tasksone === ("csharp" || "javaone") && taskstwo === ("javatwo" || "phpone" || "phptwo")) {
+      if (largeorsmall === "small" && tasksone === ("csharp" || "javaone") && taskstwo === ("javatwo" || "php")) {
         $("#suggestion").show();
         $(".answer").show();
         $("#ruby").show();
         $("#endmessage").show();
-      } else if (largeorsmall === "large" && tasksone === "csharp" && taskstwo === ("javatwo" || "phpone" || "phptwo")) {
+        $("#java").hide();
+        $("#php").hide();
+        $("#design").hide();
+        $("#csharp").hide();
+      } else if (largeorsmall === "large" && tasksone === "csharp" && taskstwo === ("javatwo" || "php")) {
         $("#suggestion").show();
         $(".answer").show();
         $("#csharp").show();
         $("#endmessage").show();
+        $("#java").hide();
+        $("#php").hide();
+        $("#design").hide();
+        $("#ruby").hide();
       } else if (largeorsmall === "large" && tasksone === "javaone" && taskstwo === "javatwo") {
         $("#suggestion").show();
         $(".answer").show();
         $("#java").show();
         $("#endmessage").show();
-      } else if (largeorsmall === "large" && tasksone === ("csharp" || "javaone") && taskstwo === ("phpone" || "phptwo")) {
+        $("#ruby").hide();
+        $("#php").hide();
+        $("#design").hide();
+        $("#csharp").hide();
+      } else if (largeorsmall === "large" && tasksone === "javaone" && taskstwo === "php") {
         $("#suggestion").show();
         $(".answer").show();
         $("#php").show();
         $("#endmessage").show();
-      } else if (largeorsmall === "large" && tasksone === ("csharp" || "javaone") && taskstwo === ("javatwo" || "phpone" || "phptwo")) {
-        $("#suggestion").show();
-        $(".answer").show();
-        $("#php").show();
-        $("#endmessage").show();
+        $("#java").hide();
+        $("#ruby").hide();
+        $("#design").hide();
+        $("#csharp").hide();
       } else {
         console.log("error");
       }
