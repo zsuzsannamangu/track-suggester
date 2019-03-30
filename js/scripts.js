@@ -10,6 +10,7 @@ $(document).ready(function() {
       if (frontorback === "front") {
         $(".answer").show();
         $("#design").show();
+        $(".suggestion-choice:not(#design)").hide();
         $("#suggestion").show();
         $("#endmessage").show();
         $("#button2").hide();
@@ -51,7 +52,7 @@ $(document).ready(function() {
       } else {
         console.log("error");
       }
-      $("#design").fadeToggle();
+      $("#design").hide();
       $(".answer").show();
       $("#endmessage").show();
       $("#suggestion").show();
