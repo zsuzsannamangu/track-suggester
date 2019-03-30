@@ -8,11 +8,13 @@ $(document).ready(function() {
     $(".firstname").text(firstnameInput);
 
       if (frontorback === "front") {
+        $(".answer").show();
+        $("#design").show();
+        $("#suggestion").show();
+        $("#endmessage").show();
+        $("#button2").hide();
         $(".backend").hide();
         $(".tasks").hide();
-        $("#suggestion").fadeToggle();
-        $("#design").fadeToggle();
-        $("#endmessage").fadeToggle();
       } else if (frontorback === "back") {
         $(".nextquestions").show();
         $(".btntwo").show();
@@ -49,7 +51,7 @@ $(document).ready(function() {
       } else {
         console.log("error");
       }
-      $("#design").hide();
+      $("#design").fadeToggle();
       $(".answer").show();
       $("#endmessage").show();
       $("#suggestion").show();
