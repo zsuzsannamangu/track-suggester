@@ -6,7 +6,7 @@
 
 ## Description
 
-_This Track Suggester webpage asks future students a series of questions about themselves and provides a track suggestion based on their answers._
+_This Track Suggester webpage asks future students a series of questions about themselves and provides a track suggestion based on their answers. The project can be viewed on GH-Pages here: https://zsuzsannamangu.github.io/track-suggester/.
 
 ## Setup/Installation Requirements
 
