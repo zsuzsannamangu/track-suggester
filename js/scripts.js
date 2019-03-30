@@ -8,11 +8,14 @@ $(document).ready(function() {
     $(".firstname").text(firstnameInput);
 
       if (frontorback === "front") {
+        $(".answer").show();
+        $("#design").show();
+        $(".suggestion-choice:not(#design)").hide();
+        $("#suggestion").show();
+        $("#endmessage").show();
+        $("#button2").hide();
         $(".backend").hide();
         $(".tasks").hide();
-        $("#suggestion").fadeToggle();
-        $("#design").fadeToggle();
-        $("#endmessage").fadeToggle();
       } else if (frontorback === "back") {
         $(".nextquestions").show();
         $(".btntwo").show();
@@ -34,46 +37,25 @@ $(document).ready(function() {
     $(".email").text(emailInput);
     $(".firstname").text(firstnameInput);
 
-      if (largeorsmall === "small" && tasksone === "csharp" || tasksone === "javaone" && taskstwo === "javatwo" || taskstwo === "php") {
-        $("#suggestion").show();
-        $(".answer").show();
+      if (largeorsmall === "small") {
         $("#ruby").show();
-        $("#endmessage").show();
-        $("#java").hide();
-        $("#php").hide();
-        $("#design").hide();
-        $("#csharp").hide();
-      } else if (largeorsmall === "large" && tasksone === "csharp" && taskstwo === "javatwo" || taskstwo === "php") {
-        $("#suggestion").show();
-        $(".answer").show();
+        $(".suggestion-choice:not(#ruby)").hide();
+      } else if (tasksone === "csharp") {
         $("#csharp").show();
-        $("#endmessage").show();
-        $("#java").hide();
-        $("#php").hide();
-        $("#design").hide();
-        $("#ruby").hide();
-      } else if (largeorsmall === "large" && tasksone === "javaone" && taskstwo === "javatwo") {
-        $("#suggestion").show();
-        $(".answer").show();
+        $(".suggestion-choice:not(#csharp)").hide();
+      } else if (taskstwo === "javatwo") {
         $("#java").show();
-        $("#endmessage").show();
-        $("#ruby").hide();
-        $("#php").hide();
-        $("#design").hide();
-        $("#csharp").hide();
-      } else if (largeorsmall === "large" && tasksone === "javaone" && taskstwo === "php") {
-        $("#suggestion").show();
-        $(".answer").show();
+        $(".suggestion-choice:not(#java)").hide();
+      } else if (taskstwo === "php") {
         $("#php").show();
-        $("#endmessage").show();
-        $("#java").hide();
-        $("#ruby").hide();
-        $("#design").hide();
-        $("#csharp").hide();
+        $(".suggestion-choice:not(#php)").hide();
       } else {
         console.log("error");
       }
-
+      $("#design").hide();
+      $(".answer").show();
+      $("#endmessage").show();
+      $("#suggestion").show();
     event.preventDefault();
   });
 });
